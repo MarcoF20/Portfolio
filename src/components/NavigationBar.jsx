@@ -23,7 +23,6 @@ export function NavigationBar () {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Container />
     </>
   )
 }

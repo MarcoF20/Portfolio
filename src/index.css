@@ -1,26 +1,62 @@
-:root{
-  --purple: #7D83FF;
-  --aqua: #51A3A3;
+:root {
+  --purple: #7d83ff;
+  --aqua: #51a3a3;
   --dark-green: #223127;
   --beige-shade: rgba(233, 220, 188, 0.63);
-  --light-beige: #F9F5ED;
+  --light-beige: #f9f5ed;
   font-size: 10px;
 }
-body{
+body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Nunito';
+  font-family: "Nunito";
   background-color: var(--light-beige);
 }
-.navbar-brand{
+.navbar-brand {
   font-size: 3.2rem;
   color: var(--aqua);
 }
-.navIcon{
+.navIcon {
   width: 3.2rem;
   height: 3.2rem;
 }
-#navContainer{
+#navContainer {
   border-bottom: 2px solid var(--beige-shade);
+}
+#myPhoto {
+  object-fit: cover;
+  border-radius: 100%;
+}
+h1 {
+  color: var(--dark-green);
+  font-weight: bold;
+  font-size: 6.4rem;
+}
+h2 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: var(--aqua);
+}
+#aboutDescription {
+  word-wrap: break-word;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--dark-green);
+}
+#contactButton {
+  text-align: center;
+  height: 6rem;
+  width: 19.2rem;
+  border: none;
+  outline: none;
+  border-radius: 1.2rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+  background-color: var(--purple);
+  color: var(--light-beige);
+  padding: 1rem 3rem;
+  text-decoration: none;
+  display: block;
+  margin-top: 2rem;
 }
