@@ -1,0 +1,26 @@
+:root{
+  --purple: #7D83FF;
+  --aqua: #51A3A3;
+  --dark-green: #223127;
+  --beige-shade: rgba(233, 220, 188, 0.63);
+  --light-beige: #F9F5ED;
+  font-size: 10px;
+}
+body{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito';
+  background-color: var(--light-beige);
+}
+.navbar-brand{
+  font-size: 3.2rem;
+  color: var(--aqua);
+}
+.navIcon{
+  width: 3.2rem;
+  height: 3.2rem;
+}
+#navContainer{
+  border-bottom: 2px solid var(--beige-shade);
+}
