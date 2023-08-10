@@ -4,7 +4,7 @@ import myPhoto from '../assets/me.jpg'
 export function About () {
   return (
     <>
-      <Container>
+      <Container style={{ marginTop: 20 }}>
         <Row>
           <Col xs={12} sm={6}>
             <div id='aboutWrap'>
@@ -18,8 +18,8 @@ export function About () {
               <a id='contactButton' href='#'>Contact Me</a>
             </div>
           </Col>
-          <Col xs={12} sm={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <div>
+          <Col xs={12} sm={6} style={{ display: 'flex', alignItems: 'center' }} id='photoColumn'>
+            <div id='photoWrap'>
               <img src={myPhoto} alt='Marco&apos;s photo' id='myPhoto' height={248} width={248} />
             </div>
           </Col>
