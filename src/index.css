@@ -4,22 +4,27 @@
   --dark-green: #223127;
   --beige-shade: rgba(233, 220, 188, 0.63);
   --light-beige: #f9f5ed;
+  --dark-green-opacity: rgba(34, 49, 39, 0.7);
+  --light-opacity: rgba(249, 245, 237, 0.7);
   font-size: 10px;
 }
 body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Nunito";
+  font-family: "Nunito", "system-ui";
   background-color: var(--light-beige);
 }
 .navbar-brand {
   font-size: 3.2rem;
   color: var(--aqua);
 }
-.navIcon {
+.navIcon, .jobIcon {
   width: 3.2rem;
   height: 3.2rem;
+}
+.jobIcon{
+  margin-right: 1rem;
 }
 #navContainer {
   border-bottom: 2px solid var(--beige-shade);
@@ -61,11 +66,50 @@ h2 {
   display: block;
   margin-top: 2rem;
 }
+.sectionHeading{
+  font-size: 3.2rem;
+  color: var(--dark-green);
+  text-align: center;
+  padding-bottom: 1rem;
+  font-weight: bold;
+}
+.date{
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--dark-green-opacity);
+  line-height: 0;
+}
+.jobTitle{
+  font-size: 2.4rem;
+  color: var(--dark-green);
+  font-weight: bold;
+  line-height: 3rem;
+}
+.jobDescription{
+  font-size: 1.6rem;
+  color: var(--dark-green-opacity);
+  font-weight: bold;
+}
+.circle{
+  width: 1.1rem;
+  height: 1.1rem;
+  background-color: var(--aqua);
+  display: inline-block;
+  border-radius: 100%;
+  position: absolute;
+  left: -0.6rem;
+}
+section{
+  margin-top: 14rem;
+}
 /* Mobile view photo */
 @media screen and (max-width: 575px){
   #photoColumn{
     justify-content: center;
     margin-top: 5rem;
+  }
+  .job{
+    margin-left: 1rem;
   }
 }
 @media screen and (min-width: 576px){
