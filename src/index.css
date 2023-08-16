@@ -1,10 +1,10 @@
 :root {
-  --purple: #7d83ff;
-  --aqua: #51a3a3;
+  --purple: #4953ff;
+  --aqua: #0c7e7c;
   --dark-green: #223127;
   --beige-shade: rgba(233, 220, 188, 0.63);
   --light-beige: #f9f5ed;
-  --dark-green-opacity: rgba(34, 49, 39, 0.7);
+  --dark-green-opacity: rgba(34, 49, 39, 0.8);
   --light-opacity: rgba(249, 245, 237, 0.7);
   font-size: 10px;
 }
@@ -19,11 +19,12 @@ body {
   font-size: 3.2rem;
   color: var(--aqua);
 }
-.navIcon, .jobIcon {
+.navIcon,
+.jobIcon {
   width: 3.2rem;
   height: 3.2rem;
 }
-.jobIcon{
+.jobIcon {
   margin-right: 1rem;
 }
 #navContainer {
@@ -65,32 +66,58 @@ h2 {
   text-decoration: none;
   display: block;
   margin-top: 2rem;
+  box-shadow: 0px 8px 24px 0px rgba(57, 55, 52, 0.1);
 }
-.sectionHeading{
+.projectButton {
+  text-align: center;
+  height: 6rem;
+  width: 19.2rem;
+  border: none;
+  outline: none;
+  border-radius: 1.2rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+  background-color: var(--dark-green);
+  color: var(--light-beige);
+  padding: 1rem 3rem;
+  text-decoration: none;
+  display: block;
+}
+.projectTitle{
+  color: var(--dark-green);
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.projectText{
+  color: var(--dark-green-opacity);
+  font-size: 1.8rem;
+}
+
+.sectionHeading {
   font-size: 3.2rem;
   color: var(--dark-green);
   text-align: center;
   padding-bottom: 1rem;
   font-weight: bold;
 }
-.date{
+.date {
   font-size: 1.8rem;
   font-weight: bold;
   color: var(--dark-green-opacity);
   line-height: 0;
 }
-.jobTitle{
+.jobTitle {
   font-size: 2.4rem;
   color: var(--dark-green);
   font-weight: bold;
   line-height: 3rem;
 }
-.jobDescription{
+.jobDescription {
   font-size: 1.6rem;
   color: var(--dark-green-opacity);
   /* font-weight: bold; */
 }
-.circle{
+.circle {
   width: 1.1rem;
   height: 1.1rem;
   background-color: var(--aqua);
@@ -99,28 +126,33 @@ h2 {
   position: absolute;
   left: -0.6rem;
 }
-section{
+section {
   margin-top: 14rem;
 }
+
 /* Mobile view photo */
-@media screen and (max-width: 575px){
-  #photoColumn{
+@media screen and (max-width: 575px) {
+  #photoColumn {
     justify-content: center;
     margin-top: 5rem;
   }
-  .job{
-    margin-left: 1rem;
+  body {
+    padding: 0 1rem; 
+    /* 
+      TODO: 
+      Improve positioning to override y-scroll ✅
+    */
   }
 }
-@media screen and (min-width: 576px){
-  #photoColumn{
+@media screen and (min-width: 576px) {
+  #photoColumn {
     justify-content: flex-end;
     padding: 0;
   }
 }
 /* Spacing in larger screens */
-@media screen and (min-width: 992px )  {
-  #photoColumn{
+@media screen and (min-width: 992px) {
+  #photoColumn {
     justify-content: right;
     padding-right: 5rem;
   }

@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { ProjectCard } from './ProjectCard'
 
 export function Projects () {
   return (
@@ -10,6 +11,21 @@ export function Projects () {
           <Col>
             <h2 className='sectionHeading'>Projects</h2>
           </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row>
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
         </Row>
       </Container>
     </section>
