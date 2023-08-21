@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { ProjectCard } from './ProjectCard'
+import { projects } from '../data/projectsData'
 
 export function Projects () {
   return (
@@ -15,17 +16,21 @@ export function Projects () {
       </Container>
       <Container>
         <Row>
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {
+            projects.map((project, index) => {
+              return (
+                <ProjectCard
+                  key={index}
+                  image={project.image}
+                  title={project.title}
+                  description={project.description}
+                  skills={project.skills}
+                  repo={project.repo}
+                  demo={project.demo}
+                />
+              )
+            })
+          }
         </Row>
       </Container>
     </section>

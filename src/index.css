@@ -14,6 +14,8 @@ body {
   margin: 0;
   font-family: "Nunito", "system-ui";
   background-color: var(--light-beige);
+  scroll-behavior: smooth;
+  scrollbar-color: var(--aqua);
 }
 .navbar-brand {
   font-size: 3.2rem;
@@ -33,21 +35,19 @@ body {
 #myPhoto {
   object-fit: cover;
   border-radius: 100%;
+  box-shadow: 0px 8px 24px 0px rgba(57, 55, 52, 0.1);
 }
 h1 {
   color: var(--dark-green);
-  font-weight: bold;
   font-size: 6.4rem;
 }
 h2 {
   font-size: 3.2rem;
-  font-weight: bold;
   color: var(--aqua);
 }
 #aboutDescription {
   word-wrap: break-word;
   font-size: 2.4rem;
-  /* font-weight: bold; */
   overflow-wrap: break-word;
   color: var(--dark-green);
 }
@@ -68,27 +68,51 @@ h2 {
   margin-top: 2rem;
   box-shadow: 0px 8px 24px 0px rgba(57, 55, 52, 0.1);
 }
-.projectButton {
+.actionButton{
   text-align: center;
-  height: 6rem;
-  width: 19.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   outline: none;
   border-radius: 1.2rem;
   font-size: 2.4rem;
   font-weight: bold;
-  background-color: var(--dark-green);
+  background-color: var(--purple);
   color: var(--light-beige);
   padding: 1rem 3rem;
   text-decoration: none;
-  display: block;
+  box-shadow: 0px 8px 24px 0px rgba(57, 55, 52, 0.1);
 }
-.projectTitle{
+.projectButton {
+  padding: 1rem 3rem;
+  border: none;
+  outline: none;
+  border-radius: 1.2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  background-color: var(--dark-green);
+  color: var(--light-beige);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toggleDropdown {
+  background-color: var(--dark-green);
+  border: none;
+  border-radius: 1.2rem;
+  width: 3rem;
+}
+a.dropdown-item{
+  font-size: 1.4rem;
+}
+.projectTitle {
   color: var(--dark-green);
   font-size: 2.4rem;
   font-weight: bold;
 }
-.projectText{
+.projectText {
   color: var(--dark-green-opacity);
   font-size: 1.8rem;
 }
@@ -102,7 +126,6 @@ h2 {
 }
 .date {
   font-size: 1.8rem;
-  font-weight: bold;
   color: var(--dark-green-opacity);
   line-height: 0;
 }
@@ -137,11 +160,7 @@ section {
     margin-top: 5rem;
   }
   body {
-    padding: 0 1rem; 
-    /* 
-      TODO: 
-      Improve positioning to override y-scroll ✅
-    */
+    padding: 0 1rem;
   }
 }
 @media screen and (min-width: 576px) {
@@ -157,3 +176,8 @@ section {
     padding-right: 5rem;
   }
 }
+/* @media screen and (prefers-color-scheme: dark) {
+  body{
+    background-color: black;
+  }
+} */

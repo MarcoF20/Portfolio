@@ -24,11 +24,11 @@ export function Timeline () {
           jobs.map(job => {
             return (
               <Job
-                key={job.jobId}
-                jobTitle={job.jobTitle}
-                jobDescription={job.jobDescription}
+                key={job.id}
+                jobTitle={job.title}
+                jobDescription={job.description}
                 date={job.date}
-                skills={job.jobSkills}
+                skills={job.skills}
               />
             )
           })

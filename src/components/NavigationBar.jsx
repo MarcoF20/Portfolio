@@ -1,8 +1,8 @@
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-import linkedinIcon from '../assets/linkedin-icon.svg'
-import githubIcon from '../assets/github-icon.svg'
+import linkedinIcon from '../assets/icons/linkedin-icon.svg'
+import githubIconAlt from '../assets/icons/github-icon-alt.svg'
 
 export function NavigationBar () {
   return (
@@ -17,7 +17,7 @@ export function NavigationBar () {
                 <img src={linkedinIcon} alt='LinkedIn Logo' className='navIcon' />
               </Nav.Link>
               <Nav.Link href='https://github.com/MarcoF20' target='_blank'>
-                <img src={githubIcon} alt='LinkedIn Logo' className='navIcon' />
+                <img src={githubIconAlt} alt='LinkedIn Logo' className='navIcon' />
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

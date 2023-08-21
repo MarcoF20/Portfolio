@@ -1,4 +1,5 @@
 import { About } from './components/About'
+import { Contact } from './components/Contact'
 import { NavigationBar } from './components/NavigationBar'
 import { Projects } from './components/Projects'
 import { Timeline } from './components/Timeline'
@@ -11,6 +12,7 @@ function App () {
       <About />
       <Timeline />
       <Projects />
+      <Contact />
     </>
   )
 }

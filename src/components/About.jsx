@@ -1,4 +1,4 @@
-import { Col, Container, Row } from 'react-bootstrap'
+import { Button, Col, Container, Row } from 'react-bootstrap'
 import myPhoto from '../assets/me.jpg'
 
 export function About () {
@@ -15,7 +15,7 @@ export function About () {
                 That's the way I work. delivering
                 innovation to your business.
               </p>
-              <a id='contactButton' href='#'>Contact Me</a>
+              <Button id='contactButton' href='#contactMe' as='a'>Contact Me</Button>
             </div>
           </Col>
           <Col xs={12} sm={6} style={{ display: 'flex', alignItems: 'center' }} id='photoColumn'>
