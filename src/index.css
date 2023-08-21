@@ -22,12 +22,18 @@ body {
   color: var(--aqua);
 }
 .navIcon,
-.jobIcon {
+.jobIcon,
+.actionIcon {
   width: 3.2rem;
   height: 3.2rem;
 }
-.jobIcon {
+.jobIcon, .actionIcon {
   margin-right: 1rem;
+}
+.iconWrap{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
 }
 #navContainer {
   border-bottom: 2px solid var(--beige-shade);
@@ -68,7 +74,7 @@ h2 {
   margin-top: 2rem;
   box-shadow: 0px 8px 24px 0px rgba(57, 55, 52, 0.1);
 }
-.actionButton{
+.contactButtons{
   text-align: center;
   display: flex;
   justify-content: center;
@@ -83,6 +89,7 @@ h2 {
   padding: 1rem 3rem;
   text-decoration: none;
   box-shadow: 0px 8px 24px 0px rgba(57, 55, 52, 0.1);
+  width: 30rem;
 }
 .projectButton {
   padding: 1rem 3rem;
@@ -161,6 +168,12 @@ section {
   }
   body {
     padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 767px){
+  .contactButtons{
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
 @media screen and (min-width: 576px) {

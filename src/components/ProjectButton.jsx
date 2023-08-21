@@ -11,7 +11,7 @@ export function ProjectButton ({ demo, repo }) {
         <Dropdown.Toggle split variant='primary' id='dropdown-split-basic' className='toggleDropdown' />
 
         <Dropdown.Menu>
-          <Dropdown.Item href='#/action-1'>Live demo</Dropdown.Item>
+          <Dropdown.Item href={demo} as='a' target='_blank' rel='noreferrer'>Live demo</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
     )

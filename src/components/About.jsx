@@ -1,5 +1,8 @@
-import { Button, Col, Container, Row } from 'react-bootstrap'
-import myPhoto from '../assets/me.jpg'
+import Button from 'react-bootstrap/Button'
+import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import myPhoto from '../assets/me.webp'
 
 export function About () {
   return (

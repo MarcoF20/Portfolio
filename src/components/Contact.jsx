@@ -29,12 +29,12 @@ export function Contact () {
               flexDirection: 'column'
             }}
           >
-            <Button className='actionButton' as='a' href='mailto:l.i.franco.t@gmail.com'>
-              <img src={emailIcon} alt='' className='jobIcon' />
+            <Button className='contactButtons' as='a' href='mailto:l.i.franco.t@gmail.com'>
+              <img src={emailIcon} alt='' className='actionIcon' />
               Mail Me
             </Button>
-            <Button className='actionButton' as='a' href='/CV-en.pdf'>
-              <img src={externalIcon} alt='' className='jobIcon' />
+            <Button className='contactButtons' as='a' href='/CV-en.pdf' target='_blank' rel='noreferrer'>
+              <img src={externalIcon} alt='' className='actionIcon' />
               View Resume
             </Button>
           </Col>

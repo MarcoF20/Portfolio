@@ -25,7 +25,7 @@ export function ProjectCard ({ image, title, description, skills, repo, demo }) 
           <Card.Title className='projectTitle'>{title}</Card.Title>
           <Card.Text className='projectText'>{description}</Card.Text>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2rem' }}>
-            <div>
+            <div className='iconWrap'>
               {
                 skills.map((skill, index) => {
                   return (
