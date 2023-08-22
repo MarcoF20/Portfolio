@@ -8,7 +8,8 @@ export function ProjectCard ({ image, title, description, skills, repo, demo }) 
       xs={12} md={6} style={{
         display: 'flex',
         justifyContent: 'center',
-        marginBottom: '5rem'
+        marginBottom: '5rem',
+        alignItems: 'flex-start'
       }}
     >
       <Card
@@ -29,7 +30,7 @@ export function ProjectCard ({ image, title, description, skills, repo, demo }) 
               {
                 skills.map((skill, index) => {
                   return (
-                    <img src={skill} alt='' className='jobIcon' key={index} />
+                    <img src={skill} alt='Icon of the skill' className='jobIcon' key={index} />
                   )
                 })
               }
