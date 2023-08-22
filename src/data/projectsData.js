@@ -11,10 +11,13 @@ import bootstrapIcon from '../assets/icons/bootstrapIcon.svg'
 import gitIcon from '../assets/icons/gitIcon.svg'
 import stripeIcon from '../assets/icons/stripeIcon.svg'
 import mysqlIcon from '../assets/icons/mysqlIcon.svg'
-import lifemedic from '../assets/lifemedic.webp'
-import mascotienda from '../assets/mascotienda.webp'
-import ppt from '../assets/ppt.webp'
-import crud from '../assets/crud.webp'
+import reactIcon from '../assets/icons/reacticon.svg'
+import muiIcon from '../assets/icons/muiIcon.svg'
+import lifemedic from '../assets/mockups/lifemedic.webp'
+import mascotienda from '../assets/mockups/mascotienda.webp'
+import ppt from '../assets/mockups/ppt.webp'
+import crud from '../assets/mockups/crud.webp'
+import hangman from '../assets/mockups/hangman.webp'
 
 export const projects = [
   {
@@ -52,5 +55,14 @@ export const projects = [
     skills: [jsIcon, htmlIcon, cssIcon],
     repo: 'https://github.com/MarcoF20/CRUD-Alumnos',
     demo: false
+  },
+  {
+    id: 5,
+    image: hangman,
+    title: 'Hangman',
+    description: 'React-based Hangman game showcasing core concepts such as useState and useEffect for state management, API data retrieval, and integration of Material-UI components for enhanced user interface.',
+    skills: [reactIcon, jsIcon, muiIcon, gitIcon],
+    repo: 'https://github.com/MarcoF20/hangman-react',
+    demo: 'https://francodev-hangman.netlify.app/'
   }
 ]
