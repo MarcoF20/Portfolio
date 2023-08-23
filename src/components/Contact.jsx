@@ -33,7 +33,7 @@ export function Contact () {
               <img src={emailIcon} alt='' className='actionIcon' />
               Mail Me
             </Button>
-            <Button className='contactButtons' as='a' href='/CV-en.pdf' target='_blank' rel='noreferrer'>
+            <Button className='contactButtons secondary' as='a' href='/CV-en.pdf' target='_blank' rel='noreferrer'>
               <img src={externalIcon} alt='' className='actionIcon' />
               View Resume
             </Button>

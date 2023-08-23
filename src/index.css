@@ -1,14 +1,18 @@
 :root {
+  /* Color palette */
   --purple: #4953ff;
+  --purpleAlt: #6c72f7;
   --aqua: #0c7e7c;
   --dark-green: #223127;
   --beige-shade: rgba(233, 220, 188, 0.63);
   --light-beige: #f9f5ed;
   --dark-green-opacity: rgba(34, 49, 39, 0.8);
   --light-opacity: rgba(249, 245, 237, 0.7);
+  /* Base rem size */
   font-size: 10px;
 }
 body {
+  /* Reset and global options*/
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -17,45 +21,39 @@ body {
   scroll-behavior: smooth;
   scrollbar-color: var(--aqua);
 }
+/* Navigation bar */
 .navbar-brand {
   font-size: 3.2rem;
   color: var(--aqua);
 }
+#navContainer {
+  border-bottom: 2px solid var(--beige-shade);
+}
+/* Icons in navbar, experience section, projects and some buttons */
 .navIcon,
 .jobIcon,
 .actionIcon {
   width: 3.2rem;
   height: 3.2rem;
+  transition: transform ease-in-out 0.3s;
 }
 .jobIcon, .actionIcon {
   margin-right: 1rem;
 }
+.jobIcon:hover{
+  transform: scale(1.5);
+}
+/* Icon container in project cards */
 .iconWrap{
   display: flex;
   flex-wrap: wrap;
   gap: 0.2rem;
 }
-#navContainer {
-  border-bottom: 2px solid var(--beige-shade);
-}
+/* About section */
 #myPhoto {
   object-fit: cover;
   border-radius: 100%;
   box-shadow: 0px 8px 24px 0px rgba(57, 55, 52, 0.1);
-}
-h1 {
-  color: var(--dark-green);
-  font-size: 6.4rem;
-}
-h2 {
-  font-size: 3.2rem;
-  color: var(--aqua);
-}
-#aboutDescription {
-  word-wrap: break-word;
-  font-size: 2.4rem;
-  overflow-wrap: break-word;
-  color: var(--dark-green);
 }
 #contactButton {
   text-align: center;
@@ -73,7 +71,30 @@ h2 {
   display: block;
   margin-top: 2rem;
   box-shadow: 0px 8px 24px 0px rgba(57, 55, 52, 0.1);
+  transition: background ease-in-out 0.3s;
 }
+#contactButton:hover, .contactButtons:hover{
+  background-color: var(--purpleAlt);
+}
+#contactButton:active, .contactButtons:active{
+  background-color: var(--purpleAlt) !important;
+}
+#aboutDescription {
+  word-wrap: break-word;
+  font-size: 2.4rem;
+  overflow-wrap: break-word;
+  color: var(--dark-green);
+}
+/* Headings */
+h1 {
+  color: var(--dark-green);
+  font-size: 6.4rem;
+}
+h2 {
+  font-size: 3.2rem;
+  color: var(--aqua);
+}
+/* Mail and resume buttons, may change */
 .contactButtons{
   text-align: center;
   display: flex;
@@ -91,6 +112,15 @@ h2 {
   box-shadow: 0px 8px 24px 0px rgba(57, 55, 52, 0.1);
   width: 30rem;
 }
+.contactButtons.secondary{
+  background-color: var(--dark-green);
+}
+.contactButtons.secondary:hover, .contactButtons.secondary:active{
+  background-color: var(--dark-green-opacity);
+  outline: none;
+  border: none;
+}
+/* Project Card buttons */
 .projectButton {
   padding: 1rem 3rem;
   border: none;
@@ -104,16 +134,31 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background ease-in-out 0.3s;
 }
+.projectButton:hover{
+  background-color: var(--dark-green-opacity);
+}
+.projectButton:active{
+  background-color: var(--dark-green-opacity) !important;
+}
+/* Project Card toggle button (when available) */
 .toggleDropdown {
   background-color: var(--dark-green);
   border: none;
   border-radius: 1.2rem;
   width: 3rem;
 }
+
+.toggleDropdown:hover, .toggleDropdown:active, .toggleDropdown:focus{
+  background-color: var(--dark-green-opacity) !important;
+}
+
+/* Link inside toggle */
 a.dropdown-item{
   font-size: 1.4rem;
 }
+/* Project Cards */
 .projectTitle {
   color: var(--dark-green);
   font-size: 2.4rem;
@@ -131,6 +176,7 @@ a.dropdown-item{
   padding-bottom: 1rem;
   font-weight: bold;
 }
+/* Jobs */
 .date {
   font-size: 1.8rem;
   color: var(--dark-green-opacity);
