@@ -31,6 +31,15 @@ export const projects = [
   },
   {
     id: 2,
+    image: hangman,
+    title: 'Hangman',
+    description: 'React-based Hangman game showcasing core concepts such as useState and useEffect for state management, API data retrieval, and integration of Material-UI components for enhanced user interface.',
+    skills: [reactIcon, jsIcon, muiIcon, gitIcon],
+    repo: 'https://github.com/MarcoF20/hangman-react',
+    demo: 'https://francodev-hangman.netlify.app/'
+  },
+  {
+    id: 3,
     image: mascotienda,
     title: 'MascoTienda',
     description: 'E-Commerce fundamentals (adding products, shopping cart, payment) built with Bootstrap and PHP for backend, Stripe as payment method',
@@ -39,7 +48,7 @@ export const projects = [
     demo: 'https://abeyant-equivalents.000webhostapp.com/'
   },
   {
-    id: 3,
+    id: 4,
     image: crud,
     title: 'School CRUD',
     description: 'Developed a PHP CRUD application for student management, featuring essential functionalities like adding, deleting, and searching for student data.',
@@ -48,21 +57,12 @@ export const projects = [
     demo: false
   },
   {
-    id: 4,
+    id: 5,
     image: ppt,
     title: 'Rock, papper, scissors',
     description: 'Crafted a dynamic Rock-Paper-Scissors game with HTML, CSS, and JavaScript. Employed conditional statements and setInterval for image transitions, showcasing fundamental coding and interactive web development skills.',
     skills: [jsIcon, htmlIcon, cssIcon],
     repo: 'https://github.com/MarcoF20/CRUD-Alumnos',
     demo: false
-  },
-  {
-    id: 5,
-    image: hangman,
-    title: 'Hangman',
-    description: 'React-based Hangman game showcasing core concepts such as useState and useEffect for state management, API data retrieval, and integration of Material-UI components for enhanced user interface.',
-    skills: [reactIcon, jsIcon, muiIcon, gitIcon],
-    repo: 'https://github.com/MarcoF20/hangman-react',
-    demo: 'https://francodev-hangman.netlify.app/'
   }
 ]
