@@ -13,13 +13,7 @@ export function Timeline () {
           </Col>
         </Row>
       </Container>
-      <Container
-        className='job'
-        style={{
-          borderLeft: '1px solid var(--aqua)',
-          position: 'relative'
-        }}
-      >
+      <Container className='job'>
         {
           jobs.map(job => {
             return (

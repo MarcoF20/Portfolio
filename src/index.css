@@ -1,33 +1,53 @@
-:root {
+:root, html[data-theme='light'] {
   /* Color palette */
-  --purple: #4953ff;
-  --purpleAlt: #6c72f7;
-  --aqua: #0c7e7c;
-  --dark-green: #223127;
-  --beige-shade: rgba(233, 220, 188, 0.63);
+  /* Light Palette */
+  --primary: #6745C4;
+  --primaryAlt: #8064CE;
+  --subheading: #0c7e7c;
+  --text: #223127;
+  --text-opacity: rgba(34, 49, 39, 0.8);
+  --background: #FFFDF7;
+  --card-bg: #F4FFFD;
+  --white: #FFFDF7;
+  --navBorder: rgba(233, 220, 188, 0.63);
   --light-beige: #f9f5ed;
-  --dark-green-opacity: rgba(34, 49, 39, 0.8);
-  --light-opacity: rgba(249, 245, 237, 0.7);
   /* Base rem size */
   font-size: 10px;
 }
+:root[data-theme='dark']{
+  /* Dark Palette */
+  --primary: #6745C4;
+  --primaryAlt: #8064CE;
+  --subheading: #33c7c4;
+  --text: #f9f5ed;
+  --text-opacity: rgba(249, 245, 237, 0.7);
+  --background: #232430;
+  --card-bg: #2a3439;
+  --white: #FFFDF7;
+  --text-opacity: rgba(249, 245, 237, 0.7);
+  --navBorder: rgba(249, 245, 237, 0.7);
+}
 body {
-  /* Reset and global options*/
+  /* Reset and global styles*/
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: "Nunito", "system-ui";
-  background-color: var(--light-beige);
+  background-color: var(--background);
   scroll-behavior: smooth;
-  scrollbar-color: var(--aqua);
 }
 /* Navigation bar */
 .navbar-brand {
   font-size: 3.2rem;
-  color: var(--aqua);
+  color: var(--subheading);
+}
+.navbar-brand:hover,
+.navbar-brand:active,
+.navbar-brand:focus {
+  color: var(--subheading);
 }
 #navContainer {
-  border-bottom: 2px solid var(--beige-shade);
+  border-bottom: 2px solid var(--navBorder);
 }
 /* Icons in navbar, experience section, projects and some buttons */
 .navIcon,
@@ -37,14 +57,15 @@ body {
   height: 3.2rem;
   transition: transform ease-in-out 0.3s;
 }
-.jobIcon, .actionIcon {
+.jobIcon,
+.actionIcon {
   margin-right: 1rem;
 }
-.jobIcon:hover{
+.jobIcon:hover {
   transform: scale(1.5);
 }
 /* Icon container in project cards */
-.iconWrap{
+.iconWrap {
   display: flex;
   flex-wrap: wrap;
   gap: 0.2rem;
@@ -58,44 +79,45 @@ body {
 #contactButton {
   text-align: center;
   height: 6rem;
-  width: 19.2rem;
   border: none;
   outline: none;
   border-radius: 1.2rem;
   font-size: 2.4rem;
   font-weight: bold;
-  background-color: var(--purple);
-  color: var(--light-beige);
+  background-color: var(--primary);
+  color: var(--white);
   padding: 1rem 3rem;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   margin-top: 2rem;
   box-shadow: 0px 8px 24px 0px rgba(57, 55, 52, 0.1);
   transition: background ease-in-out 0.3s;
 }
-#contactButton:hover, .contactButtons:hover{
-  background-color: var(--purpleAlt);
+#contactButton:hover,
+.contactButtons:hover {
+  background-color: var(--primaryAlt);
 }
-#contactButton:active, .contactButtons:active{
-  background-color: var(--purpleAlt) !important;
+#contactButton:active,
+.contactButtons:active {
+  background-color: var(--primaryAlt) !important;
 }
 #aboutDescription {
   word-wrap: break-word;
   font-size: 2.4rem;
   overflow-wrap: break-word;
-  color: var(--dark-green);
+  color: var(--text);
 }
 /* Headings */
 h1 {
-  color: var(--dark-green);
+  color: var(--text);
   font-size: 6.4rem;
 }
 h2 {
   font-size: 3.2rem;
-  color: var(--aqua);
+  color: var(--subheading);
 }
 /* Mail and resume buttons, may change */
-.contactButtons{
+.contactButtons {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -105,22 +127,37 @@ h2 {
   border-radius: 1.2rem;
   font-size: 2.4rem;
   font-weight: bold;
-  background-color: var(--purple);
-  color: var(--light-beige);
+  background-color: var(--primary);
+  color: var(--white);
   padding: 1rem 3rem;
   text-decoration: none;
   box-shadow: 0px 8px 24px 0px rgba(57, 55, 52, 0.1);
   width: 30rem;
 }
-.contactButtons.secondary{
-  background-color: var(--dark-green);
+#contactMessage {
+  font-size: 4.8rem;
+  color: var(--text-opacity);
+  max-width: 15ch;
 }
-.contactButtons.secondary:hover, .contactButtons.secondary:active{
-  background-color: var(--dark-green-opacity);
+.contactButtons.secondary {
+  background-color: transparent;
+  color: var(--text);
+  outline: 1px solid var(--text);
+}
+.contactButtons.secondary:hover,
+.contactButtons.secondary:active {
+  background-color: var(--text-opacity) !important;
   outline: none;
   border: none;
 }
 /* Project Card buttons */
+.card {
+  width: 40.8rem;
+  background-color: var(--card-bg);
+  border: none;
+  border-radius: 2.2rem;
+  filter: drop-shadow(0px 4px 18px rgba(57, 55, 52, 0.1));
+}
 .projectButton {
   padding: 1rem 3rem;
   border: none;
@@ -128,50 +165,56 @@ h2 {
   border-radius: 1.2rem;
   font-size: 1.8rem;
   font-weight: bold;
-  background-color: var(--dark-green);
-  color: var(--light-beige);
+  background-color: var(--primary);
+  color: var(--white);
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background ease-in-out 0.3s;
 }
-.projectButton:hover{
-  background-color: var(--dark-green-opacity);
+.projectButton:hover {
+  background-color: var(--primaryAlt);
+  color: var(--white);
 }
-.projectButton:active{
-  background-color: var(--dark-green-opacity) !important;
+.projectButton:active {
+  background-color: var(--primaryAlt) !important;
 }
 /* Project Card toggle button (when available) */
 .toggleDropdown {
-  background-color: var(--dark-green);
+  background-color: var(--primary);
   border: none;
   border-radius: 1.2rem;
   width: 3rem;
 }
 
-.toggleDropdown:hover, .toggleDropdown:active, .toggleDropdown:focus{
-  background-color: var(--dark-green-opacity) !important;
+.toggleDropdown:hover,
+.toggleDropdown:active,
+.toggleDropdown:focus {
+  background-color: var(--primaryAlt) !important;
+}
+.toggleDropdown.show {
+  background-color: var(--primaryAlt) !important;
 }
 
 /* Link inside toggle */
-a.dropdown-item{
+a.dropdown-item {
   font-size: 1.4rem;
 }
 /* Project Cards */
 .projectTitle {
-  color: var(--dark-green);
+  color: var(--text);
   font-size: 2.4rem;
   font-weight: bold;
 }
 .projectText {
-  color: var(--dark-green-opacity);
+  color: var(--text-opacity);
   font-size: 1.8rem;
 }
 
 .sectionHeading {
   font-size: 3.2rem;
-  color: var(--dark-green);
+  color: var(--text);
   text-align: center;
   padding-bottom: 1rem;
   font-weight: bold;
@@ -179,24 +222,28 @@ a.dropdown-item{
 /* Jobs */
 .date {
   font-size: 1.8rem;
-  color: var(--dark-green-opacity);
+  color: var(--text-opacity);
   line-height: 0;
+}
+.job {
+  border-left: 1px solid var(--subheading);
+  position: relative;
 }
 .jobTitle {
   font-size: 2.4rem;
-  color: var(--dark-green);
+  color: var(--text);
   font-weight: bold;
   line-height: 3rem;
 }
 .jobDescription {
   font-size: 1.6rem;
-  color: var(--dark-green-opacity);
+  color: var(--text-opacity);
   /* font-weight: bold; */
 }
 .circle {
   width: 1.1rem;
   height: 1.1rem;
-  background-color: var(--aqua);
+  background-color: var(--subheading);
   display: inline-block;
   border-radius: 100%;
   position: absolute;
@@ -207,6 +254,7 @@ section {
 }
 
 /* Mobile view photo */
+/* Screens with 575px width or less */
 @media screen and (max-width: 575px) {
   #photoColumn {
     justify-content: center;
@@ -216,27 +264,90 @@ section {
     padding: 0 1rem;
   }
 }
-@media screen and (max-width: 767px){
-  .contactButtons{
+/* Screens with 767px width or less */
+@media screen and (max-width: 767px) {
+  .contactButtons {
     width: 100%;
     margin-bottom: 1rem;
   }
+  #basic-navbar-nav{
+    padding-bottom: 1rem;
+  }
+  #animatedGif{
+    margin-bottom: 3rem;
+  }
 }
+/* Screens with 576px width or more */
 @media screen and (min-width: 576px) {
   #photoColumn {
     justify-content: flex-end;
     padding: 0;
   }
 }
-/* Spacing in larger screens */
+/* Screens with 992px width or more */
 @media screen and (min-width: 992px) {
   #photoColumn {
     justify-content: right;
     padding-right: 5rem;
   }
 }
-/* @media screen and (prefers-color-scheme: dark) {
-  body{
-    background-color: black;
-  }
-} */
+
+/* Dark Mode switch */
+/* The switch - the box around the slider */
+.switch {
+  display: block;
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--navBorder);
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon,1.4em);
+  width: var(--size-of-icon,1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset,0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+  ;
+ transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}

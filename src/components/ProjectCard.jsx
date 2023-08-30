@@ -12,15 +12,7 @@ export function ProjectCard ({ image, title, description, skills, repo, demo }) 
         alignItems: 'flex-start'
       }}
     >
-      <Card
-        style={{
-          width: '40.8rem',
-          backgroundColor: '#CAE9FF',
-          border: 'none',
-          borderRadius: '2.2rem',
-          filter: 'drop-shadow(0px 4px 18px rgba(57, 55, 52, 0.1))'
-        }}
-      >
+      <Card className='card'>
         <Card.Img variant='top' src={image} style={{ backgroundColor: 'white' }} />
         <Card.Body>
           <Card.Title className='projectTitle'>{title}</Card.Title>

@@ -4,6 +4,7 @@ import externalIcon from '../assets/icons/external-link.svg'
 import emailIcon from '../assets/icons/email.svg'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
+import gif from '../assets/programmer.gif'
 export function Contact () {
   return (
     <section>
@@ -11,14 +12,12 @@ export function Contact () {
         <Row>
           <Col xs={12} md={6}>
             <h2 className='sectionHeading' style={{ textAlign: 'left' }} id='contactMe'>Contact Me</h2>
-            <p
-              style={{
-                fontSize: '4.8rem',
-                color: 'var(--dark-green-opacity)',
-                maxWidth: '15ch'
-              }}
-            >I would like to work with you!
+            <p id='contactMessage'>
+              I would like to work with you!
             </p>
+            <div style={{ objectFit: 'contain' }}>
+              <img src={gif} alt='Illustrative gif' style={{ maxWidth: '100%', borderRadius: '1rem' }} id='animatedGif' />
+            </div>
           </Col>
           <Col
             xs={12} md={6}
