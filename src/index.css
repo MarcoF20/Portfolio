@@ -49,6 +49,11 @@ body {
 #navContainer {
   border-bottom: 2px solid var(--navBorder);
 }
+.nav-link-text{
+  font-size: 1.4rem;
+  color: var(--text) !important;
+  margin-left: 1rem;
+}
 /* Icons in navbar, experience section, projects and some buttons */
 .navIcon,
 .jobIcon,

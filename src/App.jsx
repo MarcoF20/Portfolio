@@ -24,7 +24,7 @@ function App () {
       <About />
       <Timeline />
       <Projects />
-      <Contact darkMode={darkMode}/>
+      <Contact />
     </>
   )
 }

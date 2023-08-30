@@ -5,7 +5,7 @@ import emailIcon from '../assets/icons/email.svg'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import gif from '../assets/programmer.gif'
-export function Contact ({ darkMode }) {
+export function Contact () {
   return (
     <section>
       <Container>
