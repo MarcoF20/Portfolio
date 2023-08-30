@@ -18,7 +18,7 @@ export function About () {
                 That's the way I work. delivering
                 innovation to your business.
               </p>
-              <Button id='contactButton' href='#contactMe' as='a'>Let's get in touch</Button>
+              <Button id='contactButton' href='#contact' as='a'>Let's get in touch</Button>
             </div>
           </Col>
           <Col xs={12} sm={6} style={{ display: 'flex', alignItems: 'center' }} id='photoColumn'>
