@@ -15,7 +15,7 @@ export function Contact () {
             <p id='contactMessage'>
               I would like to work with you!
             </p>
-            <div style={{ objectFit: 'contain' }}>
+            <div style={{ objectFit: 'contain', display: 'flex', justifyContent: 'center' }}>
               <img src={gif} alt='Illustrative gif' style={{ maxWidth: '100%', borderRadius: '1rem' }} id='animatedGif' />
             </div>
           </Col>

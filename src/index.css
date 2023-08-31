@@ -108,7 +108,7 @@ body {
 }
 .contactButtons:hover,
 .contactButtons:active{
-  scale: 1.1;
+  scale: 1.05;
 }
 #aboutDescription {
   word-wrap: break-word;
@@ -123,6 +123,10 @@ h1 {
 }
 h2 {
   font-size: 3.2rem;
+  color: var(--subheading);
+}
+h4{
+  font-size: 2rem;
   color: var(--subheading);
 }
 /* Mail and resume buttons, may change */
@@ -157,7 +161,7 @@ h2 {
 }
 .contactButtons.secondary:hover,
 .contactButtons.secondary:active {
-  scale: 1.1;
+  scale: 1.05;
   background-color: transparent !important;
   color: #CF4D6F !important;
 }
@@ -263,7 +267,17 @@ a.dropdown-item {
 section {
   margin-top: 14rem;
 }
-
+/* Footer */
+footer{
+  width: 100%;
+  height: 10vh;
+  color: var(--text);
+}
+footer a{
+  color: #CF4D6F;
+  text-decoration: none;
+  font-style: italic;
+}
 /* Mobile view photo */
 /* Screens with 575px width or less */
 @media screen and (max-width: 575px) {
@@ -286,6 +300,9 @@ section {
   }
   #animatedGif{
     margin-bottom: 3rem;
+  }
+  #credits{
+    text-align: center;
   }
 }
 /* Screens with 576px width or more */

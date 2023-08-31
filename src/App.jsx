@@ -4,6 +4,7 @@ import { Contact } from './components/Contact'
 import { NavigationBar } from './components/NavigationBar'
 import { Projects } from './components/Projects'
 import { Timeline } from './components/Timeline'
+import { Footer } from './components/Footer'
 // import { jobs } from './data/jobsData'
 
 function App () {
@@ -25,6 +26,7 @@ function App () {
       <Timeline />
       <Projects />
       <Contact />
+      <Footer />
     </>
   )
 }
