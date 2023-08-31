@@ -277,6 +277,27 @@ footer a{
   color: #CF4D6F;
   text-decoration: none;
   font-style: italic;
+  transition: text-decoration ease-in-out 0.3s;
+  display: inline-block;
+  position: relative;
+  padding: 0.1rem 0;
+}
+footer a::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.2rem;
+  background-color: #CF4D6F;
+  opacity: 0;
+  transition: all ease-in-out 0.3s; 
+}
+footer a:hover::after,
+footer a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.1rem, 0);
+  width: 100%;
 }
 /* Mobile view photo */
 /* Screens with 575px width or less */

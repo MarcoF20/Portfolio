@@ -22,7 +22,9 @@ function App () {
   return (
     <>
       <NavigationBar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <About />
+      <main>
+        <About />
+      </main>
       <Timeline />
       <Projects />
       <Contact />
