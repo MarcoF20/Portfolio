@@ -15,7 +15,7 @@ export function About () {
               <h2>Web Developer</h2>
               <p id='aboutDescription'>
                 Professional, structured and clean.
-                That's the way I work. delivering
+                That's the way I work. Delivering
                 innovation to your business.
               </p>
               <Button id='contactButton' href='#contact' as='a'>Let's get in touch</Button>
